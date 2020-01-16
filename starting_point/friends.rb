@@ -49,3 +49,14 @@ def favourite_snacks(people_array)
   end
   return new_array
 end
+
+def no_friends(people_array)
+  result = []
+  for person in people_array
+    friends = person[:friends]
+    if friends.length == 0
+      result.push(person)
+    end
+  end
+  return result
+end
