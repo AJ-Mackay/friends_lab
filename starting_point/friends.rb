@@ -32,3 +32,10 @@ def total_monies(people_array)
   end
   return total
 end
+
+def lend_monies(lender, lendee, amount)
+ give = lender[:monies] - amount
+ get = lendee[:monies] + amount
+new_array = [give, get]
+return new_array
+end
