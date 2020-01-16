@@ -17,12 +17,12 @@ def likes_to_eat(person, test)
 end
 
 def add_friend(person, friend)
-    person[:friends].push(friend)
+  person[:friends].push(friend)
 end
 
 def remove_friend(person, friend)
-    person[:friends].delete(friend)
-  end
+  person[:friends].delete(friend)
+end
 
 def total_monies(people_array)
   total = 0
@@ -34,8 +34,18 @@ def total_monies(people_array)
 end
 
 def lend_monies(lender, lendee, amount)
- give = lender[:monies] - amount
- get = lendee[:monies] + amount
-new_array = [give, get]
-return new_array
+  give = lender[:monies] - amount
+  get = lendee[:monies] + amount
+  new_array = [give, get]
+  return new_array
+end
+
+def favourite_snacks(people_array)
+  new_array = []
+  for person in people_array
+    for item in person[:favourites][:snacks]
+      new_array.push(item)
+    end
+  end
+  return new_array
 end
