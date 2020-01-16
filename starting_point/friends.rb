@@ -12,6 +12,10 @@ def likes_to_eat(person, test)
     if test == snack
       return true
     end
-    end
-    return false
   end
+  return false
+end
+
+def add_friend(person, friend)
+    person[:friends].push(friend)
+end
